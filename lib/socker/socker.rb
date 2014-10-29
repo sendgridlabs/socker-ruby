@@ -31,6 +31,7 @@ module Socker
       @httpclient = HTTPClient.new
       @httpclient.connect_timeout = 5
       @httpclient.receive_timeout = 5
+      @httpclient.ssl_config.ssl_version = :TLSv1_2
     end
 
     def authenticate(path, id)
